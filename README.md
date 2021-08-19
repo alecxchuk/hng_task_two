@@ -1,16 +1,10 @@
+
+
+https://user-images.githubusercontent.com/48722111/130055255-a7dc96d1-ec34-4047-b9d7-67c1e9898615.mp4
+
 # hng_task_two
 
-A new Flutter project.
+This flutter project is the stage 2 task for hng & zuri internship program
 
-## Getting Started
+It is a simple program that collects user input and displays it to the mobile screen
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
