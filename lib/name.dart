@@ -58,7 +58,7 @@ class _NameState extends State<Name> {
                             answer = controller.text;
                           });
                         }
-                        print('Chukwudi Okani');
+                        printMyName();
                         controller.clear();
                       },
                       child: Text('Send'))),
@@ -145,6 +145,10 @@ class _NameState extends State<Name> {
     } else {
       throw 'Could not launch $url';
     }
+  }
+
+  printMyName() {
+    print('Okani Chukwudi Alexander');
   }
 
   @override
