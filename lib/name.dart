@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 
 class Name extends StatefulWidget {
   @override
@@ -90,27 +90,38 @@ class _NameState extends State<Name> {
                         child: Row(
                           children: [
                             Expanded(
-                                child: Image(
-                              image: AssetImage('assets/images/hng_logo.png'),
-                              height: 80,
+                                child: GestureDetector(
+                              onTap: () => _launchURL('https://hng.tech/'),
+                              child: Image(
+                                image: AssetImage('assets/images/hng_logo.png'),
+                                height: 80,
+                              ),
                             )),
                             SizedBox(
                               width: 16.0,
                             ),
                             Expanded(
-                              child: Image(
-                                image: AssetImage('assets/images/i4g_logo.png'),
-                                height: 80,
+                              child: GestureDetector(
+                                onTap: () =>
+                                    _launchURL('https://ingressive.org/'),
+                                child: Image(
+                                  image:
+                                      AssetImage('assets/images/i4g_logo.png'),
+                                  height: 80,
+                                ),
                               ),
                             ),
                             SizedBox(
                               width: 16.0,
                             ),
                             Expanded(
-                              child: Image(
-                                image:
-                                    AssetImage('assets/images/zuri_logo.png'),
-                                height: 80,
+                              child: GestureDetector(
+                                onTap: () => _launchURL('https://zuri.team/'),
+                                child: Image(
+                                  image:
+                                      AssetImage('assets/images/zuri_logo.png'),
+                                  height: 80,
+                                ),
                               ),
                             ),
                           ],
@@ -125,6 +136,15 @@ class _NameState extends State<Name> {
         ),
       ),
     );
+  }
+
+  _launchURL(url) async {
+    //const url = 'https://flutter.io';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   @override
